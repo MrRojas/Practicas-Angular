@@ -1,0 +1,13 @@
+# Heramientas usadas en el curso
+
+*	Navegador web google chrome
+*	Editor de Texto Atom
+*	Node.js (npm)
+*	AngularCli 
+
+## AngularCLI 
+
+	Es un set de herramientas de consola usado para angular 4, facilitan:
+	Crear Proyectos y Generar componentes, rutas, servicios, pipes, entre otros.
+
+	Ademas nos permite correr nuestro App de manera local
