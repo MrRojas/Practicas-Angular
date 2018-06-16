@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+<head  >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>.: Hola mundo con Angular Js </title>
+
+
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../lib/icono/stylesheet.css">
+
+    <link rel="shorcut icon" href="../img/icono.ico">
+    
+    <script src="../lib/angular/angular.js" > </script>
+	<script src="../lib/angular/angular-route.js" > </script>
+
+</head>
+<body ng-app=armando >
+
+	<section class="container">
+		<div class="row">
+
+			<div class="jumbotron" ng-controller="miControlador">
+				<h2 class="text-center" ng-bind="miVar"  >
+                    
+					<i class="glyphicon glyphicon-cloud"> </i>
+				</h2>
+
+			
+			</div>
+
+			
+		</div>
+	</section>
+
+
+    <script>
+        
+        angular.module('armando',[])
+        .controller('miControlador', function($scope) {
+            $scope.miVar = 'Hola desde el controlador'
+        })
+    
+    </script>
+
+
+	
+
+	
+	<script src="../lib/jquery/jquery.js" ></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js" > </script>
+	
+
+
+
+</body>
+</html>
