@@ -11,3 +11,7 @@
 	Crear Proyectos y Generar componentes, rutas, servicios, pipes, entre otros.
 
 	Ademas nos permite correr nuestro App de manera local
+
+	para descargarlo usamos:
+
+	npm install -g @angular/cli

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html  ng-app =app >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Scope 1era Parte </title>
+
+
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../lib/icono/stylesheet.css">
+
+	<link rel="shorcut icon" href="../img/ic ono.ico">
+
+	<script src="../lib/angular/angular.js" > </script>
+	<script src="../lib/angular/angular-route.js" > </script>
+
+		
+
+</head>
+<body >
+
+	
+
+
+
+	<section class="container">
+		<div class="row">
+
+			<div class="jumbotron">
+				<h2 class="text-center"  ng-controller='miControlador' >
+					{{ mensaje }}
+					<i class="glyphicon glyphicon-cloud"> </i>
+				</h2>
+
+				
+			</div>
+
+			
+			
+		</div>
+	</section>
+
+
+
+
+	<script>
+		angular.module('app', []).controller('miControlador', function miControlador($scope){
+
+			$scope.mensaje = 'Hola Mundo desde mi primer controlador xD ';
+		})
+		
+		
+
+	</script>
+	
+
+
+	
+	<script src="../lib/jquery/jquery.js" ></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js" > </script>
+
+
+
+
+
+
+</body>
+</html>

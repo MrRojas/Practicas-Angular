@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app>
+<head  >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>.: Hola mundo con Angular Js </title>
+
+
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../lib/icono/stylesheet.css">
+
+	<link rel="shorcut icon" href="../img/icono.ico">
+
+</head>
+<body >
+
+	<section class="container">
+		<div class="row">
+
+			<div class="jumbotron">
+				<h2 class="text-center">
+					<i class="glyphicon glyphicon-cloud"> </i>
+					Si entiendes los temas, marca el checkbox 
+					<i class="glyphicon glyphicon-cloud"> </i>
+				</h2>
+
+				<div class="col-md-1 col-md-offset-11">
+					
+					<input type="checkbox" class="form-control  checkbox checkbox-inline" ng-model='respuesta' >
+				</div>
+				
+			</div>
+
+			
+			
+		</div>
+	</section>
+
+
+	<section class="container" >
+		<div class="row">
+
+			<div class="jumbotron">
+				<h3 class="text-center" ng-show='respuesta' >
+				
+					Excelente, seguimos avanzando en el curso  
+					<i class="glyphicon glyphicon-fire"> </i>
+				</h3>
+
+				<h3 class="text-center" ng-hide='respuesta' >
+				
+					Sigue Intentando... 
+					<i class="glyphicon glyphicon-check"> </i>
+				</h3>
+
+
+				<h4 class="text-center">
+					
+					By: Armando Rojas 
+					<i class="glyphicon glyphicon-certificate"> </i>
+				</h4>
+
+			
+			
+		</div>
+	</section>
+
+
+	
+
+
+	
+	<script src="../lib/jquery/jquery.js" ></script>
+	
+	<script src="../lib/bootstrap/js/bootstrap.min.js" > </script>
+	
+	<script src="../lib/sweetAlert2/sweetalert2.js" > </script>
+
+	<script src="../lib/angular/angular.js" > </script>
+	<script src="../lib/angular/angular-route.js" > </script>
+
+
+
+</body>
+</html>
