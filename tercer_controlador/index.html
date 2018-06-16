@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html >
+<head  >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>.: Hola mundo con Angular Js </title>
+
+
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../lib/icono/stylesheet.css">
+
+    <link rel="shorcut icon" href="../img/icono.ico">
+    
+    <script src="../lib/angular/angular.js" > </script>
+	<script src="../lib/angular/angular-route.js" > </script>
+
+</head>
+<body ng-app=armando >
+
+	<section class="container">
+		<div class="row">
+
+			<div class="jumbotron" >
+				<h2 class="text-center"   >
+                    Uso de Controladores Anidados...
+					<i class="glyphicon glyphicon-cloud"> </i>
+				</h2>
+
+			
+			</div>
+
+			
+		</div>
+    </section>
+    
+    <section class="container">
+        <div class="row" ng-controller="padreController">
+
+            
+            <button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block ng-click="logPadre()">
+                Papa
+            </button>
+
+            <div ng-controller="hijoController">
+                <button ng-click="logHijo()" type="button" name="" id="" class="btn btn-danger" btn-lg btn-block>
+                    Hijo
+                </button>
+
+                <div ng-controller="nietoController">
+                    <button ng-click="logNieto()" type="button" name="" id="" class="btn btn-warning" btn-lg btn-block>
+                        Nieto
+                    </button>
+                </div>
+
+            </div>
+
+          
+
+
+            
+           
+        </div>
+    </section>
+
+
+    <script>
+        
+        angular.module('armando',[])
+        .controller('padreController', function($scope) {
+            
+            $scope.padre = 'Soy el Padre :v '
+
+            $scope.logPadre = function(){
+            
+                mensaje("El Papa...","watagatapitusberry what???" )
+            }
+            
+
+        })
+        .controller('hijoController', function($scope){
+
+            $scope.hijo = "Soy el Hijo :'v"
+            
+            $scope.logHijo = function(){
+            
+             mensaje("El Hijo...", $scope.padre )
+            }
+          
+        })
+        .controller('nietoController', function($scope){
+
+                $scope.nieto = 'Soy el nieto xD '
+            
+            $scope.logNieto = function(){
+            
+                mensaje("El Nieto...", $scope.padre+' -- '+$scope.hijo )
+           }
+
+        })
+
+
+        function mensaje(titulo , mensaje) {
+            swal({
+                title: titulo,
+                text : mensaje,
+                animation: false,
+                customClass: 'animated tada',
+                imageUrl: '../img/venezuela.jpg',
+                imageWidth: 400,
+                imageHeight: 200,
+                })
+        }
+    
+    </script>
+
+
+	
+
+	
+	<script src="../lib/jquery/jquery.js" ></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js" > </script>
+    <script src="../lib/sweetAlert2/sweetalert2.js" > </script>
+	
+
+
+
+</body>
+</html>
