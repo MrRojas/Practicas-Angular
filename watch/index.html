@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+<head  >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> .:Uso de $watch :. </title>
+
+
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../lib/icono/stylesheet.css">
+
+    <link rel="shorcut icon" href="../img/icono.ico">
+    
+    <script src="../lib/angular/angular.js" > </script>
+	<script src="../lib/angular/angular-route.js" > </script>
+
+</head>
+<body ng-app=formulario1 >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+            <div class="panel">
+                    <div class="panel-header bg-primary">
+                         <div class="panel-title text-center">
+                             <h1> Formulario </h1>
+                         </div>
+                    </div>
+             
+                    <div class="panel-body" ng-controller="validateFormulario">
+                        
+                        <form class="form">
+                            <div class="form-group">
+                                <div class="col-md-3 col-md-offset-1">
+                                <label class="label-control" > Ingrese Clave</label>
+                                </div>
+                                <div class="col-md-5">
+                                <input ng-model="clave" type="password" class="form-control" placeholder="Ingresa una clave" >
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-4">
+                                    <label class="label-control" > {{ error }} </label>
+                                    </div>
+                                </div>
+
+                        </form>
+
+                    </div>
+             
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script>
+   
+    angular.module('formulario1',[])
+    .controller('validateFormulario',($scope)=>{
+
+        $scope.$watch('clave' , (nuevo,anterior)=>{
+
+            if (nuevo.length < 3) $scope.error = 'Menor a 3 Caracteres no sirve'
+            else $scope.error = 'Campo listo'
+        })
+    })
+   </script>
+
+	
+
+	
+	<script src="../lib/jquery/jquery.js" ></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js" > </script>
+
+
+
+</body>
+</html>
