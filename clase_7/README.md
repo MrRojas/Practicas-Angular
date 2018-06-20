@@ -10,3 +10,25 @@ Las directivas son una forma elegante y rápida de manipular la información, co
 
 
 ## Ejemplo en clase 
+
+
+export class AppComponent {
+  
+  title = 'PlatziSquare'; 
+
+  // array que acepta todo tipo de objecto 
+  lugares:any = [
+    {nombre : 'Floreria la Gardenia'},
+    {nombre : 'Donas la Pasadita'},
+    {nombre : 'Veterinaria UNEFA'}
+  ];
+
+}
+
+
+<h1>Armando </h1>
+<ul>
+	<li *ngFor="let lugar of lugares">
+		{{lugar.nombre}}
+	</li>
+</ul>
