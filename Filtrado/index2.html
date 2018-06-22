@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<head  >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>.: Angular Js </title>
+
+
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../lib/icono/stylesheet.css">
+
+    <link rel="shorcut icon" href="../img/icono.ico">
+    
+    <script src="../lib/angular/angular.js" > </script>
+	<script src="../lib/angular/angular-route.js" > </script>
+
+</head>
+<body ng-app=armando >
+
+
+	<div class="container-fluid" ng-controller="miControlador as v"   >
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+		<div class="row">
+			
+
+		<div class="col-md-2 col-md-offset-2" >
+			<div class="panel">
+				<div class="panel-heading bg-primary">
+					<div class="panel-title ">
+						<h4> {{ v.title}} <i class="glyphicon glyphicon-cog" ></i>  </h4>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<ol  ng-repeat="e in v.lista | filter: filtrado"  >
+					{{ e.nombre  }}
+				</ol>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<input  ng-model="filtrado" type="text" class="form-control"  placeholder="Escribe para filtrar" >
+				
+			</div>
+		</div>	
+
+
+		
+			
+
+		<div class="col-md-2" >
+			<div class="panel">
+				<div class="panel-heading bg-primary">
+					<div class="panel-title ">
+						<h4> {{ v.title2}} <i class="glyphicon glyphicon-cog" ></i>  </h4>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<ol  ng-repeat="e in v.lista | orderBy:'nombre':false "  >
+					{{ e.nombre  }}
+				</ol>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<input  ng-model="filtrado" type="text" class="form-control"  placeholder="Escribe para filtrar" >
+				
+			</div>
+		</div>	
+
+
+		</div>
+
+		
+
+
+	</div>
+
+    <script src="controller.js"> </script>
+
+
+	<script src="../lib/jquery/jquery.js" ></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js" > </script>
+	
+
+
+
+</body>
+</html>

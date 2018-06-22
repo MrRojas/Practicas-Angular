@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<head  >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>.: Hola mundo con Angular Js </title>
+
+
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../lib/icono/stylesheet.css">
+
+    <link rel="shorcut icon" href="../img/icono.ico">
+    
+    <script src="../lib/angular/angular.js" > </script>
+	<script src="../lib/angular/angular-route.js" > </script>
+
+</head>
+<body ng-app >
+
+
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-8 col-md-offset-2" ng-init="clase = bg-danger;" >
+			
+
+			<h2 ng-class="clase"  > 
+
+				Hola 
+
+				{{pulsado}}
+			</h2>
+
+
+		</div>
+
+
+		<div class="col-md-3 col-md-offset-2">
+			
+
+			<select ng-model="clase" class="form-control" >
+				<option value="bg-danger">Rojo</option>
+				<option value="bg-primary">Azul</option>
+			</select>
+
+
+		</div>
+
+
+
+		<div class="col-md-3 ">
+			
+
+			<input class="form-control" type="checkbox" ng-model="pulsado"  
+			 ng-true-value="claro"   ng-false-value="SeñorRojas"    >
+
+		</div>
+
+
+
+	</div>
+</div>
+
+
+
+<script src="../lib/jquery/jquery.js" ></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js" > </script>
+	
+
+</body>
+</html>
