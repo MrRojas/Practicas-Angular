@@ -15,3 +15,10 @@
 	para descargarlo usamos:
 
 	npm install -g @angular/cli
+
+
+### Comandos de angularCLI
+
+* ng g directive contar-clicks -> Crear directivas
+
+* ng serve -> levantar servidor en el port 4200 
