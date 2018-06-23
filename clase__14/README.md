@@ -1,4 +1,4 @@
-# Host Binders
+# HostBinding
 
 ### Host Binding nos permite editar elementos del DOM o el HTML al que esté asignado desde nuestra directiva. Recibe el atributo del HTML que queremos resaltar.
 
