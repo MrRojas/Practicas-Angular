@@ -22,3 +22,8 @@
 * ng g directive contar-clicks -> Crear directivas
 
 * ng serve -> levantar servidor en el port 4200 
+
+
+## Paquetes NPM instalados en el curso 
+
+*	npm install bootstrap --save 
