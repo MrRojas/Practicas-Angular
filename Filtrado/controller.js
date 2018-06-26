@@ -1,4 +1,4 @@
-   angular.module('armando',[])
+ angular.module('armando',[])
    .controller('miControlador', controlador)
 
 
@@ -20,5 +20,13 @@
     ];
 
 
+
+
+
+  
+
 }
+
+
+
     

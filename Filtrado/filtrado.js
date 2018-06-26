@@ -61,4 +61,56 @@ function filtrado ($scope , $http ){
 	}
 
 
+	  // validacion 
+
+	 inputs = [ 'v.cedula' , 'v.nombre' , 'v.apellido']
+
+	 v.control = false;
+	 v.cedula = '';
+	 v.nombre = '';
+	 v.apellido = '';
+
+	 document.getElementsByTagName('select')[0].value= '0'
+	 document.getElementsByTagName('select')[1].value= '0'
+
+
+
+    $scope.$watchGroup( inputs , (nuevo,anterior)=>{
+
+    	v.error= []; 
+    	v.control = true
+   
+
+    	for (var i = 0; i < 3; i++) {
+
+    		validaCampo(i);
+    	}
+
+    	
+    	
+    		
+
+
+          function validaCampo(indice){
+          	 if (nuevo[indice].length < 3) {
+
+            	v.error[indice] = 'Debe ser mayor a 3 caracteres...'
+            	v.control = false 
+
+        	}
+            else
+            	v.error[indice]  = 'Campo listo'
+             
+          }
+
+    	
+
+          
+    })
+
+
+
+
+
+
 }

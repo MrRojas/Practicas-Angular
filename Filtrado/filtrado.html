@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-theme.min.css">
 
+
 	<link rel="stylesheet" href="../lib/icono/stylesheet.css">
 
     <link rel="shorcut icon" href="../img/icono.ico">
@@ -43,10 +44,14 @@
 
 							<div class="col-md-8 col-md-offset-2">
 								
+								<label   > {{v.error[0]}}  </label>
+
 								<input type="text" class="form-control" placeholder="Cedula" ng-model="v.cedula" >
 								<br>
+								<label   > {{v.error[1]}}  </label>
 								<input type="text" class="form-control" placeholder="Nombre" ng-model="v.nombre" >
 								<br>
+								<label   > {{v.error[2]}}  </label>
 								<input type="text" class="form-control" placeholder="Apellido" ng-model="v.apellido" >
 								<br>
 								<label > Ocupacion </label>
@@ -58,7 +63,9 @@
 								</select>
 
 								<br><br>
-								<button class="btn btn-success btn-block"  ng-click="v.asignarNuevaPersona()"  > Agregar <i class="glyphicon glyphicon-check" ></i> </button>
+								<button class="btn btn-success btn-block"  ng-disabled="!v.control"   ng-click="v.asignarNuevaPersona()"  > 
+									Agregar <i class="glyphicon glyphicon-check" ></i> 
+								</button>
 
 
 							</div>
@@ -111,7 +118,7 @@
 									<option  ng-repeat="oc in v.ocupacion"  value={{$index}}> {{oc.texto}} </option>
 								</select>
 								<br>	
-								<label > Ordenamiento </label>
+								<label > Ordenar por Nombre </label>
 								<br>
 								<select class="form-control" ng-model="v.filtradoOrdenamiento"  >
 									<option  ng-value="true" > Mayor </option>
@@ -197,6 +204,7 @@
 	<script src="filtrado.js"  ></script>
 	<script src="../lib/jquery/jquery.js" > </script>
 	<script src="../lib/bootstrap/js/bootstrap.min.js" > </script>
+
 
 </body>
 </html>
